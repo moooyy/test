@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style type="text/css">
+            html,body{margin:0;padding:0;}
+            *html{
+                background-image:url(about:blank);
+                background-attachment:fixed;
+            }
+        </style>
+    </head>
+    <body>
+
+        <p>1</p>
+        <p>2</p>
+        <p>3</p>
+        <p>4</p>
+        <p>5</p>
+        <p>6</p>
+        <p>7</p>
+        <p>8</p>
+        <p>9</p>
+        <p>0</p>
+        <p>1</p>
+        <p>2</p>
+        <p>3</p>
+        <p>4</p>
+        <p>5</p>
+        <p>6</p>
+        <p>7</p>
+        <p>8</p>
+        <p>9</p>
+        <p>0</p>
+        <p>1</p>
+        <p>2</p>
+        <p>3</p>
+        <p>4</p>
+        <p>5</p>
+        <p>6</p>
+        <p>7</p>
+        <p>8</p>
+        <p>9</p>
+        <p>0</p>
+        <p>1</p>
+        <p>2</p>
+        <p>3</p>
+        <p>4</p>
+        <p>5</p>
+        <p>6</p>
+        <p>7</p>
+        <p>8</p>
+        <p>9</p>
+        <p>0</p>
+        <script type="text/javascript" src="http://i1.sinaimg.cn/home/sinaflash.js"></script>
+        <script type="text/javascript" src="http://d2.sina.com.cn/d1images/button/rotator.js"></script>
+ 
+        <script>
+        var rad = new Array();
+        var nad = new Array();
+        rad.width = 300; //广告宽度
+        rad.height = 250; //广告高度
+        rad.num = 2; //轮播数量
+
+        <!--E40BBADCDBA6-->//商业广告
+        rad.push(["http://d3.sina.com.cn/201305/06/489822.swf", "", "<startdate>2013-06-01</startdate>", "<enddate>2013-06-30</enddate>", ""]);
+        <!--5D619CB9B0C2-->//商业广告
+        rad.push(["http://d5.sina.com.cn/201305/31/494483.swf", "", "<startdate>2013-06-01</startdate>", "<enddate>2013-06-30</enddate>", ""]);
+
+        var handler = document.createElement("div");
+        handler.id = "ad_00001";
+        handler.style.cssText = 'display:block;overflow:hidden;width:'+ rad.width +'px;height:'+ rad.height +'px;position:fixed;bottom:0;right:0;z-index:1000;'
+        var ie = /msie (\d+\.\d+)/i.test(navigator.userAgent) ? (document.documentMode || + RegExp['\x241']) : undefined;
+        if(ie<=6){
+            handler.style.position = "absolute";
+            function resizeWin () {
+                var winH = document.documentElement.clientHeight || document.body.clientHeight,
+                    winW = document.documentElement.clientWidth || document.body.clientWidth,
+                    winTop = document.documentElement.scrollTop || document.body.scrollTop;
+                    adH = rad.height,
+                    adW = rad.width;
+                    handler.style.top = (winH - adH + winTop) + "px";
+            }
+            resizeWin ();
+            try{
+                window.attachEvent("onscroll", resizeWin);
+                window.attachEvent("onresize", resizeWin);
+            }catch (e){
+                window.addEventListener("scroll", resizeWin);
+                window.addEventListener("resize", resizeWin);
+            }
+        }
+        document.body.insertBefore(handler, document.body.firstChild);
+        
+        new RotatorAD(rad,nad,'ad_00001');
+        </script>
+    </body>
+</html>
